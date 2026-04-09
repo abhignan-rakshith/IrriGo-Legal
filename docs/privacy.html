@@ -25,9 +25,9 @@
       box-shadow: 0 1px 3px rgba(0,0,0,0.06);
     }
     .header img {
-      width: 72px;
-      height: 72px;
-      border-radius: 18px;
+      width: 100px;
+      height: 100px;
+      border-radius: 22px;
       margin-bottom: 14px;
     }
     .header h1 {
@@ -101,6 +101,29 @@
     }
     .section li:last-child { padding-bottom: 0; }
     .italic { font-style: italic; color: #666; }
+
+    /* Contact card */
+    .section.contact { text-align: center; }
+    .contact-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(46,125,50,0.12), rgba(46,125,50,0.28));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      font-size: 22px;
+    }
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 6px 0;
+      font-size: 15px;
+    }
+    .contact-emoji { font-size: 18px; width: 22px; text-align: center; flex-shrink: 0; }
+    .contact-row a { font-weight: 500; text-decoration: underline; }
 
     /* Footer */
     .footer {
@@ -229,13 +252,22 @@
       <p>We may update this Privacy Policy from time to time. The updated policy will be available within the app. Continued use of IrriGo after changes constitutes acceptance of the revised policy.</p>
     </div>
 
-    <div class="section">
-      <div class="section-header">
-        <div class="section-icon">&#9993;</div>
-        <h2>Contact Us</h2>
+    <div class="section contact">
+      <div class="contact-icon">&#128101;</div>
+      <h2 style="text-align:center;color:#2E7D32;margin:12px 0 4px;">Contact Us</h2>
+      <p style="text-align:center;color:#888;font-size:14px;margin-bottom:18px;">Have questions? We'd love to hear from you.</p>
+      <div class="contact-row">
+        <span class="contact-emoji">&#128100;</span>
+        <span style="font-weight:600;">Abhignan Rakshith</span>
       </div>
-      <p>If you have questions about this Privacy Policy, please contact us:</p>
-      <p>Abhignan Rakshith<br><a href="mailto:abhignanrakshith@icloud.com">abhignanrakshith@icloud.com</a></p>
+      <div class="contact-row">
+        <span class="contact-emoji">&#9993;</span>
+        <a href="mailto:abhignanrakshith@icloud.com">abhignanrakshith@icloud.com</a>
+      </div>
+      <div class="contact-row">
+        <span class="contact-emoji">&#128222;</span>
+        <a href="tel:+919008032021">+91 9008032021</a>
+      </div>
     </div>
 
     <div class="footer">&copy; 2026 AbhiTech. All rights reserved.</div>
