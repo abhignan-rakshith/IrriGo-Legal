@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IrriGo - Privacy Policy</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #333; background: #f8faf8; }
+    .container { max-width: 720px; margin: 0 auto; padding: 40px 24px; }
+    h1 { font-size: 28px; margin-bottom: 4px; color: #1b5e20; }
+    .date { color: #888; font-size: 14px; margin-bottom: 32px; }
+    h2 { font-size: 20px; margin: 28px 0 8px; color: #2e7d32; }
+    p { margin-bottom: 16px; }
+    ul { margin: 0 0 16px 24px; }
+    li { margin-bottom: 6px; }
+    .footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #ddd; color: #888; font-size: 14px; }
+    a { color: #2e7d32; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Privacy Policy</h1>
+    <p class="date">Last updated: April 9, 2026</p>
+
+    <h2>Introduction</h2>
+    <p>AbhiTech ("we", "us", or "our") operates the IrriGo mobile application. This Privacy Policy describes how we collect, use, and protect your information when you use our app.</p>
+
+    <h2>Information We Collect</h2>
+    <p>We collect the following information:</p>
+    <ul>
+      <li><strong>Phone Number:</strong> You provide a 10-digit phone number during login. This is the only personal data collected by the app.</li>
+      <li><strong>Site Identifiers:</strong> Device site IDs that you enter or scan via QR codes to connect to your motor control units.</li>
+    </ul>
+
+    <h2>How We Use Your Information</h2>
+    <p>Your phone number is used to:</p>
+    <ul>
+      <li>Authenticate your identity with the IoT motor control device via OTP verification.</li>
+      <li>Authorize motor control commands. Your phone number is transmitted with every command to the device through AWS IoT Core (ap-south-1 region, Mumbai) over an encrypted TLS connection.</li>
+    </ul>
+    <p>Your phone number is stored locally on your device using the platform's standard preferences storage.</p>
+
+    <h2>Camera and Photo Library Access</h2>
+    <p>The app requests camera access solely to scan QR codes on your physical IrriGo device for site setup. You may also pick QR code images from your photo library.</p>
+    <p>No images are stored, uploaded, or transmitted by the app.</p>
+
+    <h2>Contacts Access</h2>
+    <p>Admin users may optionally pick a phone number from their contacts when adding authorized users to a device. Only the selected phone number is used; no other contact data is accessed or stored.</p>
+
+    <h2>Location Data</h2>
+    <p>The app does not collect GPS or location data from your phone. Any location information displayed in the app originates from the GPS module on the physical IoT device hardware.</p>
+
+    <h2>Data Storage and Security</h2>
+    <p>Phone numbers and site identifiers are stored locally on your device. Data transmitted to AWS IoT Core is encrypted in transit using TLS with certificate-based authentication.</p>
+    <p>We do not maintain a central server or database of user information. Your data is stored on your device and communicated directly with your IoT hardware through AWS.</p>
+
+    <h2>Analytics and Tracking</h2>
+    <p>IrriGo does not integrate any analytics, crash reporting, advertising, or third-party tracking services. We do not collect usage statistics or behavioral data.</p>
+
+    <h2>Data Sharing</h2>
+    <p>We do not sell, trade, or share your personal information with any third parties. Your phone number is only transmitted to your own registered IoT device through AWS IoT Core for authentication and command authorization.</p>
+
+    <h2>Data Retention and Deletion</h2>
+    <p>Your data is stored locally on your device and is removed when you uninstall the app or clear the app data. You can also change your phone number in the Configure screen, which clears stored authentication data.</p>
+
+    <h2>Children's Privacy</h2>
+    <p>IrriGo is not intended for use by children under 13. We do not knowingly collect personal information from children.</p>
+
+    <h2>Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. The updated policy will be available within the app. Continued use of IrriGo after changes constitutes acceptance of the revised policy.</p>
+
+    <h2>Contact Us</h2>
+    <p>If you have questions about this Privacy Policy, please contact us:</p>
+    <p>Abhignan Rakshith<br><a href="mailto:abhignanrakshith@icloud.com">abhignanrakshith@icloud.com</a></p>
+
+    <div class="footer">&copy; 2026 AbhiTech. All rights reserved.</div>
+  </div>
+</body>
+</html>
