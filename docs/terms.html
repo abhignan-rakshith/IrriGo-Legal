@@ -6,70 +6,240 @@
   <title>IrriGo - Terms of Use</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #333; background: #f8faf8; }
-    .container { max-width: 720px; margin: 0 auto; padding: 40px 24px; }
-    h1 { font-size: 28px; margin-bottom: 4px; color: #1b5e20; }
-    .date { color: #888; font-size: 14px; margin-bottom: 32px; }
-    h2 { font-size: 20px; margin: 28px 0 8px; color: #2e7d32; }
-    p { margin-bottom: 16px; }
-    ul { margin: 0 0 16px 24px; }
-    li { margin-bottom: 6px; }
-    .caps { font-weight: bold; }
-    .footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #ddd; color: #888; font-size: 14px; }
-    a { color: #2e7d32; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.7;
+      color: #333;
+      background: linear-gradient(135deg, #F1F8F1, #F5F5F0);
+      min-height: 100vh;
+    }
+    .container { max-width: 720px; margin: 0 auto; padding: 32px 20px 48px; }
+
+    /* Header */
+    .header {
+      background: #fff;
+      border-radius: 16px;
+      padding: 32px 24px;
+      text-align: center;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+    .header img {
+      width: 72px;
+      height: 72px;
+      border-radius: 18px;
+      margin-bottom: 14px;
+    }
+    .header h1 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #2E7D32;
+      margin-bottom: 8px;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(46, 125, 50, 0.1);
+      color: #2E7D32;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 3px 14px;
+      border-radius: 20px;
+    }
+
+    /* Section cards */
+    .section {
+      background: #fff;
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 12px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+    .section.alert {
+      background: #FFF3E0;
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .section-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(46,125,50,0.1), rgba(46,125,50,0.22));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 17px;
+    }
+    .section.alert .section-icon {
+      background: linear-gradient(135deg, rgba(245,127,23,0.1), rgba(245,127,23,0.22));
+    }
+    .section-header h2 {
+      font-size: 17px;
+      font-weight: 700;
+      color: #2E7D32;
+      margin: 0;
+    }
+    .section.alert .section-header h2 {
+      color: #E65100;
+    }
+    .section p { margin-bottom: 12px; font-size: 15px; }
+    .section p:last-child { margin-bottom: 0; }
+    .section ul {
+      margin: 8px 0 12px 0;
+      padding: 0;
+      list-style: none;
+    }
+    .section li {
+      padding: 0 0 8px 18px;
+      position: relative;
+      font-size: 15px;
+    }
+    .section li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #2E7D32;
+    }
+    .section.alert li::before {
+      background: #E65100;
+    }
+    .section li:last-child { padding-bottom: 0; }
+    .caps { font-weight: 600; }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      margin-top: 24px;
+      color: #999;
+      font-size: 13px;
+    }
+    a { color: #2E7D32; text-decoration: none; }
+    a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Terms of Use</h1>
-    <p class="date">Last updated: April 9, 2026</p>
 
-    <h2>Acceptance of Terms</h2>
-    <p>By downloading, installing, or using the IrriGo application ("the App"), you agree to be bound by these Terms of Use. If you do not agree, do not use the App.</p>
+    <div class="header">
+      <img src="assets/IrriGo_AppIcon_transparent.png" alt="IrriGo" onerror="this.style.display='none'">
+      <h1>Terms of Use</h1>
+      <span class="badge">Last updated: April 9, 2026</span>
+    </div>
 
-    <h2>Description of Service</h2>
-    <p>IrriGo is a remote motor and pump control application for agricultural irrigation systems. The App communicates with physical IoT motor control hardware via AWS IoT MQTT to enable remote monitoring and control of up to 6 motors per site.</p>
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">&#129309;</div>
+        <h2>Acceptance of Terms</h2>
+      </div>
+      <p>By downloading, installing, or using the IrriGo application ("the App"), you agree to be bound by these Terms of Use. If you do not agree, do not use the App.</p>
+    </div>
 
-    <h2>Hardware Requirement</h2>
-    <p>The App requires a physical IrriGo motor control device, purchased separately from AbhiTech. Each device includes a QR code for site setup. The App is not functional without the companion hardware device and a valid site QR code.</p>
-    <p>AbhiTech is not responsible for hardware defects, installation issues, or compatibility problems with your electrical or irrigation systems.</p>
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">&#128167;</div>
+        <h2>Description of Service</h2>
+      </div>
+      <p>IrriGo is a remote motor and pump control application for agricultural irrigation systems. The App communicates with physical IoT motor control hardware via AWS IoT MQTT to enable remote monitoring and control of up to 6 motors per site.</p>
+    </div>
 
-    <h2>Account and Access</h2>
-    <p>Users must provide a valid phone number for authentication. Admin users can register devices and manage authorized users. Regular users are added by admins and require OTP verification delivered through the device.</p>
-    <p>You are responsible for maintaining the security of your phone number and device access credentials.</p>
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">&#9881;</div>
+        <h2>Hardware Requirement</h2>
+      </div>
+      <p>The App requires a physical IrriGo motor control device, purchased separately from AbhiTech. Each device includes a QR code for site setup. The App is not functional without the companion hardware device and a valid site QR code.</p>
+      <p>AbhiTech is not responsible for hardware defects, installation issues, or compatibility problems with your electrical or irrigation systems.</p>
+    </div>
 
-    <h2>Motor Control Disclaimer</h2>
-    <p class="caps">THE APP CONTROLS PHYSICAL ELECTRICAL MOTORS AND WATER PUMPS. BY USING THE APP, YOU ACKNOWLEDGE AND ACCEPT THE FOLLOWING:</p>
-    <ul>
-      <li>AbhiTech is not liable for any damage to motors, pumps, or connected equipment resulting from use of the App.</li>
-      <li>AbhiTech is not liable for water damage, flooding, or crop damage from pump operation or failure.</li>
-      <li>AbhiTech is not liable for electrical hazards arising from motor activation or deactivation.</li>
-      <li>AbhiTech is not liable for any consequences of remote motor activation, deactivation, or scheduling.</li>
-    </ul>
-    <p>You are solely responsible for ensuring safe operating conditions before issuing any motor control commands.</p>
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">&#128100;</div>
+        <h2>Account and Access</h2>
+      </div>
+      <p>Users must provide a valid phone number for authentication. Admin users can register devices and manage authorized users. Regular users are added by admins and require OTP verification delivered through the device.</p>
+      <p>You are responsible for maintaining the security of your phone number and device access credentials.</p>
+    </div>
 
-    <h2>Network Dependency</h2>
-    <p>Motor control and device monitoring require an active internet connection and MQTT connectivity to AWS IoT Core. AbhiTech is not responsible for failed commands, delayed responses, or data loss due to network issues, AWS service outages, or device connectivity problems.</p>
+    <div class="section alert">
+      <div class="section-header">
+        <div class="section-icon">&#9888;</div>
+        <h2>Motor Control Disclaimer</h2>
+      </div>
+      <p class="caps">THE APP CONTROLS PHYSICAL ELECTRICAL MOTORS AND WATER PUMPS. BY USING THE APP, YOU ACKNOWLEDGE AND ACCEPT THE FOLLOWING:</p>
+      <ul>
+        <li>AbhiTech is not liable for any damage to motors, pumps, or connected equipment resulting from use of the App.</li>
+        <li>AbhiTech is not liable for water damage, flooding, or crop damage from pump operation or failure.</li>
+        <li>AbhiTech is not liable for electrical hazards arising from motor activation or deactivation.</li>
+        <li>AbhiTech is not liable for any consequences of remote motor activation, deactivation, or scheduling.</li>
+      </ul>
+      <p class="caps">You are solely responsible for ensuring safe operating conditions before issuing any motor control commands.</p>
+    </div>
 
-    <h2>Background Monitoring (Android)</h2>
-    <p>On Android devices, the App may run a foreground service for continuous background monitoring of device status. This feature can be enabled or disabled by the user at any time. A persistent notification is displayed while the service is active.</p>
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">&#128246;</div>
+        <h2>Network Dependency</h2>
+      </div>
+      <p>Motor control and device monitoring require an active internet connection and MQTT connectivity to AWS IoT Core. AbhiTech is not responsible for failed commands, delayed responses, or data loss due to network issues, AWS service outages, or device connectivity problems.</p>
+    </div>
 
-    <h2>Intellectual Property</h2>
-    <p>IrriGo, the IrriGo logo, and all associated content, design, and functionality are the property of AbhiTech. You may not reproduce, distribute, or create derivative works from the App without prior written consent.</p>
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">&#128260;</div>
+        <h2>Background Monitoring (Android)</h2>
+      </div>
+      <p>On Android devices, the App may run a foreground service for continuous background monitoring of device status. This feature can be enabled or disabled by the user at any time. A persistent notification is displayed while the service is active.</p>
+    </div>
 
-    <h2>Limitation of Liability</h2>
-    <p class="caps">IRRIGO IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED. ABHITECH MAKES NO WARRANTIES REGARDING THE RELIABILITY, ACCURACY, OR AVAILABILITY OF THE APP OR ITS ABILITY TO CONTROL CONNECTED HARDWARE.</p>
-    <p>In no event shall AbhiTech's total liability exceed the purchase price of the companion hardware device.</p>
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">&copy;</div>
+        <h2>Intellectual Property</h2>
+      </div>
+      <p>IrriGo, the IrriGo logo, and all associated content, design, and functionality are the property of AbhiTech. You may not reproduce, distribute, or create derivative works from the App without prior written consent.</p>
+    </div>
 
-    <h2>Termination</h2>
-    <p>AbhiTech reserves the right to terminate or restrict access to the App at any time. You may stop using the App at any time by uninstalling it from your device.</p>
+    <div class="section alert">
+      <div class="section-header">
+        <div class="section-icon">&#9878;</div>
+        <h2>Limitation of Liability</h2>
+      </div>
+      <p class="caps">IRRIGO IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED. ABHITECH MAKES NO WARRANTIES REGARDING THE RELIABILITY, ACCURACY, OR AVAILABILITY OF THE APP OR ITS ABILITY TO CONTROL CONNECTED HARDWARE.</p>
+      <p>In no event shall AbhiTech's total liability exceed the purchase price of the companion hardware device.</p>
+    </div>
 
-    <h2>Governing Law</h2>
-    <p>These Terms of Use are governed by and construed in accordance with the laws of India. Any disputes arising from these terms shall be subject to the exclusive jurisdiction of the courts in India.</p>
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">&#128683;</div>
+        <h2>Termination</h2>
+      </div>
+      <p>AbhiTech reserves the right to terminate or restrict access to the App at any time. You may stop using the App at any time by uninstalling it from your device.</p>
+    </div>
 
-    <h2>Contact Us</h2>
-    <p>If you have questions about these Terms of Use, please contact us:</p>
-    <p>Abhignan Rakshith<br><a href="mailto:abhignanrakshith@icloud.com">abhignanrakshith@icloud.com</a></p>
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">&#9878;</div>
+        <h2>Governing Law</h2>
+      </div>
+      <p>These Terms of Use are governed by and construed in accordance with the laws of India. Any disputes arising from these terms shall be subject to the exclusive jurisdiction of the courts in India.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">&#9993;</div>
+        <h2>Contact Us</h2>
+      </div>
+      <p>If you have questions about these Terms of Use, please contact us:</p>
+      <p>Abhignan Rakshith<br><a href="mailto:abhignanrakshith@icloud.com">abhignanrakshith@icloud.com</a></p>
+    </div>
 
     <div class="footer">&copy; 2026 AbhiTech. All rights reserved.</div>
   </div>
